@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="~{thymeleaf/layout}" xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Develog</title>
+</head>
+<body>
+    <div layout:fragment="content">
+
+        <h2>로그인</h2>
+        <form method="post" action="">
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Email">
+                <input type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+        </form>
+    <div>
+        <button onclick="location.href='/member'">회원가입</button>
+    </div>
+    </div>
+</body>
+</html>

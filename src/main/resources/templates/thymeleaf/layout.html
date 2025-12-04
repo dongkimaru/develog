@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8" />
+    <title>Develog</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.8/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+    <!-- 공통 헤더 영역 -->
+    <div th:replace="~{thymeleaf/header :: header}"></div>
+
+    <main class="container mt-4 mb-4">
+        <th:block layout:fragment="content"></th:block>
+    </main>
+
+    <div th:replace="~{thymeleaf/footer :: footer}"></div>
+</body>
+</html>

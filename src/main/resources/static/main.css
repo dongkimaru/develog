@@ -1,0 +1,22 @@
+.main_layout {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.category_title {
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 40px 0;
+    font-weight: bold;
+}
+.col-white {
+    color: #ffffff;
+}
+.pd-1r {
+    padding: 1rem;
+}
+.pd-2r {
+    padding: 2rem;
+}
+.pd-3r {
+    padding: 3rem;
+}

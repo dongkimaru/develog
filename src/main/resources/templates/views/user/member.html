@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko" layout:decorate="~{thymeleaf/layout}" xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <title>회원가입</title>
+  <link rel="stylesheet" href="/bootstrap-5.3.8/css/bootstrap.min.css" />
+</head>
+<body>
+
+<div layout:fragment="content" class="container mt-5" style="max-width: 600px;">
+
+  <h2 class="mb-4 text-center fw-bold">회원가입</h2>
+
+  <form th:action="@{/user/member}" th:object="${MemberForm}" method="post" class="border p-4 rounded shadow-sm bg-white">
+
+    <!-- 이름 -->
+    <div class="mb-3">
+      <label class="form-label">이름</label>
+      <input type="text" th:field="*{name}" class="form-control" placeholder="홍길동">
+    </div>
+
+    <!-- 생년월일 -->
+    <div class="mb-3">
+      <label class="form-label">생년월일</label>
+      <input type="date" th:field="*{birth}" class="form-control">
+    </div>
+
+    <!-- 주소 -->
+    <div class="mb-3">
+      <label class="form-label">주소</label>
+      <input type="text" th:field="*{address1}" class="form-control mb-2" placeholder="기본 주소">
+      <input type="text" th:field="*{address2}" class="form-control" placeholder="상세 주소">
+    </div>
+
+    <!-- 연락처 -->
+    <div class="mb-3">
+      <label class="form-label">연락처</label>
+      <input type="tel" th:field="*{phone}" class="form-control" placeholder="010-1234-5678">
+    </div>
+
+    <!-- 이메일 -->
+    <div class="mb-3">
+      <label class="form-label">이메일</label>
+      <input type="email" th:field="*{email}" class="form-control" placeholder="example@mail.com">
+    </div>
+
+    <!-- 학력 -->
+    <div class="mb-4">
+      <label class="form-label">학력</label>
+      <select th:field="*{education}" class="form-select">
+        <option value="">선택하세요</option>
+        <option value="고등학교 졸업">고등학교 졸업</option>
+        <option value="전문대 졸업">전문대 졸업</option>
+        <option value="대학교 졸업">대학교 졸업</option>
+        <option value="대학원 졸업">대학원 졸업</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">
+      회원가입
+    </button>
+
+  </form>
+
+</div>
+
+<script src="/bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
