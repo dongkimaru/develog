@@ -8,10 +8,11 @@
     <div layout:fragment="content">
 
         <h2>로그인</h2>
-        <form method="post" action="">
+        <form th:action="@{/user/login}" th:object="${LoginForm}" method="post" class="border p-4 rounded shadow-sm bg-white">
             <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email">
-                <input type="password" name="password" class="form-control" placeholder="Password">
+                <input type="email" th:field="*{email}" placeholder="Email" class="form-control">
+                <input type="password" th:field="*{password}" placeholder="Password" class="form-control mt-2">
+                <button type="submit" class="btn btn-primary mt-3">로그인</button>
             </div>
         </form>
     <div>

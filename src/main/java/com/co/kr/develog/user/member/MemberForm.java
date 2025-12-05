@@ -16,6 +16,9 @@ public class MemberForm {
     @NotBlank(message = "이름은 필수입니다.")
     private String name;
 
+    @NotBlank(message = "비밀번호는 필수입니다.")
+    private String password;
+
     @NotBlank(message = "생년월일을 입력하세요.")
     private String birth;
 

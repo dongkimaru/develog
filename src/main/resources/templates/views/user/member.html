@@ -11,12 +11,18 @@
 
   <h2 class="mb-4 text-center fw-bold">회원가입</h2>
 
-  <form th:action="@{/user/member}" th:object="${MemberForm}" method="post" class="border p-4 rounded shadow-sm bg-white">
+  <form th:action="@{/user/memberCreate}" th:object="${memberForm}" method="post" class="border p-4 rounded shadow-sm bg-white">
 
     <!-- 이름 -->
     <div class="mb-3">
       <label class="form-label">이름</label>
       <input type="text" th:field="*{name}" class="form-control" placeholder="홍길동">
+    </div>
+
+    <!-- 패스워드 -->
+    <div class="mb-3">
+      <label class="form-label">패스워드</label>
+      <input type="password" th:field="*{password}" class="form-control">
     </div>
 
     <!-- 생년월일 -->
@@ -28,8 +34,7 @@
     <!-- 주소 -->
     <div class="mb-3">
       <label class="form-label">주소</label>
-      <input type="text" th:field="*{address1}" class="form-control mb-2" placeholder="기본 주소">
-      <input type="text" th:field="*{address2}" class="form-control" placeholder="상세 주소">
+      <input type="text" th:field="*{address}" class="form-control mb-2" placeholder="서울시 마포구">
     </div>
 
     <!-- 연락처 -->
